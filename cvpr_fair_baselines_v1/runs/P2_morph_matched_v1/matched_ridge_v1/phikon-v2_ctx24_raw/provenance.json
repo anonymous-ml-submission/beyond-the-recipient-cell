@@ -1,0 +1,26 @@
+{
+  "analysis": "POSTHOC_EXACT_HNE_MATCHED_SUBSET_SENSITIVITY",
+  "method": "phikon-v2",
+  "context_um": 24,
+  "trained_target": "raw",
+  "n_train": 3998,
+  "n_val": 869,
+  "n_test": 729,
+  "alpha": 10000.0,
+  "val_log_mse": 0.30772693969878145,
+  "alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0,
+    1000.0,
+    10000.0,
+    100000.0,
+    1000000.0
+  ],
+  "original_manifest_sha256": "02d2b89a97ab903b0f54bfcae969aa2a6e6e2ea5c8787fc3df5e2959d27db275",
+  "derived_manifest_sha256": "ed76061b8ae4aa1103be9e9d3457d3c2c3a1081f65e1217e3e76ee1e832eb1d1",
+  "source_sha256": "5745c054d3832e9c8824afde287e3e2a69bed4d4b49e93f93aa0466de0679b23",
+  "prediction_sha256": "7bdc1a8842ed588ebcf2546f8d4c99c85038265c2e5b974a92e6f3bbf7286c0b",
+  "note": "Image heads refitted on the same HoVer-Net exact-mapped cells; neighborhood uses mapped nuclei only. One test patient."
+}

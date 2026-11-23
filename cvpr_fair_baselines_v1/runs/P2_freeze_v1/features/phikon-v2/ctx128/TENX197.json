@@ -1,0 +1,13 @@
+{
+  "amp": false,
+  "context_um": 128,
+  "device": "cuda",
+  "encoder": "phikon-v2",
+  "encoder_name": "owkin/phikon-v2",
+  "feature_sha256": "2402f4016f53ac522c9c52e290835fb598f5938f579231451c8f5db2757ae4f8",
+  "input_manifest_sha256": "02d2b89a97ab903b0f54bfcae969aa2a6e6e2ea5c8787fc3df5e2959d27db275",
+  "method": "frozen_encoder_linear_probe",
+  "n": 1024,
+  "seconds": 64.453,
+  "section": "TENX197"
+}

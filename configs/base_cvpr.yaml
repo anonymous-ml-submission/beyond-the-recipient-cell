@@ -1,0 +1,31 @@
+seed: 2026
+device: auto
+
+data:
+  prepared_root: data/prepared
+  sample_ids: []                 # MUST be filled with real prepared samples
+  genes: runs/gene_panel.txt
+  target: raw                    # raw | clean | both
+  context_um: 128              # visible physical width
+  canvas_um: 128               # FIXED network canvas for 24/64/128 primary ablation
+  center_um: 24
+  model_mpp: 0.5               # fixed physical sampling; all primary inputs are 256x256
+
+model:
+  method: context                # context | endovso
+  backbone: resnet18             # resnet18 | resnet50 | timm:<name>
+  pretrained: true
+  freeze_backbone: false
+  shared_encoder: true
+
+training:
+  epochs: 30
+  batch_size: 48
+  workers: 6
+  lr: 0.0001
+  weight_decay: 0.0001
+
+loss:
+  lambda_endo: 1.0
+  lambda_obs: 1.0
+  lambda_leak: 0.25

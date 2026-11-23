@@ -1,0 +1,29 @@
+# REAL DATA SMOKE/FEASIBILITY CONFIG ONLY.
+# Single donor -> spatial block split. Do NOT report this as patient generalization.
+seed: 2026
+device: auto
+data:
+  prepared_root: data/prepared_10x_demo
+  sample_ids: [TENX_BREAST_IDC]
+  genes: runs/tenx_demo/gene_panel.txt
+  target: both
+  canvas_um: 128
+  context_um: 96
+  center_um: 24
+  model_mpp: 0.5
+model:
+  method: endovso
+  backbone: resnet18
+  pretrained: true
+  freeze_backbone: false
+  shared_encoder: true
+training:
+  epochs: 15
+  batch_size: 48
+  workers: 6
+  lr: 0.0001
+  weight_decay: 0.0001
+loss:
+  lambda_endo: 1.0
+  lambda_obs: 1.0
+  lambda_leak: 0.25

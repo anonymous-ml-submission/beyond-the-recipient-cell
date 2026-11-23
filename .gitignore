@@ -1,0 +1,24 @@
+# Generated data, model weights, caches and secrets
+/data/
+/outputs/
+/checkpoints/
+/runs/**/checkpoints/
+*.pt
+*.pth
+*.ckpt
+*.parquet
+*.h5ad
+*.npy
+*.npz
+*.tif
+*.tiff
+*.env
+.env
+.env.*
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+*.egg-info/
+.DS_Store

@@ -1,0 +1,13 @@
+{
+  "amp": false,
+  "context_um": 128,
+  "device": "cuda",
+  "encoder": "imagenet-r18",
+  "encoder_name": "imagenet-v1, ResNet18 frozen linear probe",
+  "feature_sha256": "64c135d481c9f29cbf855c806f08d900f943d7859a145c5f56a2b5f9b3d10174",
+  "input_manifest_sha256": "02d2b89a97ab903b0f54bfcae969aa2a6e6e2ea5c8787fc3df5e2959d27db275",
+  "method": "frozen_encoder_linear_probe",
+  "n": 1024,
+  "seconds": 37.192,
+  "section": "TENX202"
+}
