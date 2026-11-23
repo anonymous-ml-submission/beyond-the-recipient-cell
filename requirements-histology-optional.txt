@@ -1,0 +1,7 @@
+# Optional workflows only; NOT a pinned or validated production environment.
+# Install only when the corresponding script needs these imports.
+# Some (especially tiatoolbox/torchstain) may require specific Python/Torch versions.
+tiatoolbox
+natsort
+opencv-python
+torchstain

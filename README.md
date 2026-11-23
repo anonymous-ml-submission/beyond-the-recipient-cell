@@ -72,3 +72,16 @@ This synthetic suite **passed** on the available `bioinfo` environment before pa
 The study uses public Xenium/HEST-indexed breast-carcinoma data with transcript QV ≥ 20. **No Xenium matrices, H&E whole-slide files, private system paths or model checkpoints are distributed here.** Corrected targets are a sensitivity proxy rather than verified endogenous transcription. The 5,005-record geometry-clear comparison is post hoc. The GHIST adaptation is not the full original GHIST pipeline. No result here establishes the physical source of individual RNA molecules.
 
 This repository includes source and verified synthetic contracts, **not an independently completed retraining or complete production-inference replay**. See [reproducibility details](docs/REPRODUCIBILITY.md).
+
+## GHIST and dependency scope
+
+`external_methods/GHIST/` is an **adapted-code subset**, not the full upstream
+GHIST distribution. Its retained upstream README refers to notebooks,
+`requirements.txt` and `Figure1.png` that are **not present** in this checkout.
+Read [GHIST adaptation and setup](docs/GHIST_ADAPTATION.md) before attempting
+that workflow. Optional histology imports are listed separately in
+[`requirements-histology-optional.txt`](requirements-histology-optional.txt);
+this is **not** a frozen production environment.
+
+A successful synthetic S8 test does not establish complete training, checkpoint
+replay or independent numerical regeneration of the publication figures.

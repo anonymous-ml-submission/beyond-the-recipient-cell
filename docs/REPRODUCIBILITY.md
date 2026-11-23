@@ -50,3 +50,40 @@ GHIST files retain their original attribution and license. Vendored DeLeakage so
 ## Code entry points
 
 The clean scripts under `experiments/` forward CLI options to byte-identical implementations under `scripts/`. Original versioned filenames are preserved to avoid silently breaking frozen provenance; reviewers can use the clean names for all primary operations. A private run directory may require supplying local `--project`, `--original-root`, or checkpoint arguments. Do not substitute generated test data for frozen experimental inputs.
+
+## Packaging boundaries for independent reproduction
+
+### Adapted GHIST
+
+The retained third-party GHIST README is upstream documentation for a **fuller
+repository**. The copied subset omits its upstream `requirements.txt`, tutorial
+notebooks, and `Figure1.png`. See [GHIST adaptation and setup](GHIST_ADAPTATION.md)
+for the exact distinction between upstream GHIST and the adapted benchmark
+used in this study. The partial GHIST code should not be presented as a
+standalone native GHIST reproduction.
+
+### Optional software
+
+`requirements-histology-optional.txt` lists `tiatoolbox`, `natsort`,
+`opencv-python` and `torchstain` as **unversioned optional imports** used by
+some workflows. The root `pyproject.toml` is not claimed to specify every
+historical environment. Installing these extras does not validate the full
+pipeline; package compatibility and exact historical versions remain unverified.
+
+### Full production replay still requires
+
+1. The exact 11-section Xenium/HEST inputs and the original preprocessing,
+   gene order, patient-split manifests and corrected targets.
+2. The original fitted checkpoint files for P1 and the three separately
+   patient-held-out rotations, plus checkpoint-selection and runtime settings.
+3. Frozen rank-1 match identifiers, edited prediction arrays, per-section
+   geometry flags and the aggregation inputs needed to recreate published
+   figures and tables without changing their estimands.
+4. The actual executed package versions, image preprocessing/operator
+   overrides, and dataset-to-artifact paths for each workflow.
+
+**Available:** original research implementations, code provenance, and the
+reported synthetic matching/replay checks. **Not established:** full independent
+retraining and complete frozen-data/GPU replay from this source-only repository.
+No missing dataset, checkpoint or numerical output is synthesized by this
+packaging correction.
